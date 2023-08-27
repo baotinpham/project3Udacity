@@ -25,7 +25,7 @@ script:
   # tag images
   - docker tag udagram-api-feed tinpb/udagram-api-feed:v1
   - docker tag udagram-api-user tinpb/udagram-api-user:v1
-  - docker tag udagram-frontend tinpb/udagram-frontend:v1
+  - docker tag udagram-frontend tinpb/udagram-frontend:v2
   - docker tag reverseproxy tinpb/reverseproxy:v1
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you to programmatically log in without having the password exposed in logs.
@@ -33,5 +33,5 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push tinpb/udagram-api-feed:v1
   - docker push tinpb/udagram-api-user:v1
-  - docker push tinpb/udagram-frontend:v1
+  - docker push tinpb/udagram-frontend:v2
   - docker push tinpb/reverseproxy:v1
