@@ -18,7 +18,13 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: tinpb/udagram-frontend:v1
+      - image: tinpb/udagram-frontend:v2
         name: udagram-frontend
-        resources: {}
+        resources:
+          requests:
+              memory: "64Mi"
+              cpu: "250m"
+          limits:
+              memory: "2Gi"
+              cpu: "500m"        
 status: {}

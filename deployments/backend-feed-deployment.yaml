@@ -20,7 +20,13 @@ spec:
       containers:
       - image: tinpb/udagram-api-feed:v1
         name: udagram-api-feed
-        resources: {}
+        resources: 
+          requests:
+              memory: "64Mi"
+              cpu: "250m"
+          limits:
+              memory: "2Gi"
+              cpu: "500m"
         env:
             - name: POSTGRES_HOST
               valueFrom: 
