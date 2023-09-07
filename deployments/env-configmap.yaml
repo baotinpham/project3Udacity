@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  POSTGRES_HOST: database-1.czj3xkhbtyce.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: database-1.c8vgty6rwmhf.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
   AWS_BUCKET: udacity-project3-215718144426-tinpb
   AWS_REGION: us-east-1
